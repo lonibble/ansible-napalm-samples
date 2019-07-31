@@ -1,0 +1,6 @@
+---
+- hosts: cisco
+  connection: network_cli
+  tasks:
+    - nxos_config:
+        backup: yes

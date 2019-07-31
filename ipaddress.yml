@@ -1,0 +1,9 @@
+---
+- hosts: arista
+  connection: network_cli
+  tasks:
+    - eos_config:
+        lines:
+          - no switchport
+          - ip address 172.16.1.1/24
+        parents: interface Ethernet1
